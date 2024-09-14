@@ -1,0 +1,94 @@
+
+.sortable-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.sortable-item.dragging {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.sortable-item-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.sortable-item-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.sortable-item-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sortable-item-button:hover {
+  background-color: #0056b3;
+}
+
+.sortable-item-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.sortable-item-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.sortable-item-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.sortable-item-table th, .sortable-item-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.sortable-item-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.sortable-item-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .sortable-item {
+    max-width: 100%;
+  }
+  
+  .sortable-item-button {
+    font-size: 16px;
+  }
+  
+  .sortable-item-table th, .sortable-item-table td {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
